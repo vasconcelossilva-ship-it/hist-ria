@@ -1,21 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missão IA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aventura na Pizzaria</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#ffb703;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .caixa{
+      background:white;
+      width:550px;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 0 15px rgba(0,0,0,.3);
+    }
+
+    h1{
+      color:#d62828;
+    }
+
+    #texto{
+      font-size:20px;
+      margin:20px 0;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      margin:8px 0;
+      font-size:17px;
+      border:none;
+      border-radius:8px;
+      background:#d62828;
+      color:white;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#9d0208;
+    }
+  </style>
 </head>
 <body>
-  <div class="caixa-principal">
-    <h1>Você decide o futuro da IA</h1>
-    <div class="caixa-perguntas"></div>
-    <div class="caixa-alternativas"></div>
-    <div class="caixa-resultado">
-        <p class="texto-resultado"></p>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
+<div class="caixa">
+    <h1>🍕 Aventura na Pizzaria</h1>
+
+    <p id="texto"></p>
+
+    <div id="opcoes"></div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
