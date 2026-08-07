@@ -1,100 +1,90 @@
-const historia = {
-    inicio: {
-        texto: "Você abriu sua pizzaria. Qual será sua primeira decisão?",
-        opcoes: [
-            {
-                texto: "🍕 Fazer pizza de Calabresa",
-                destino: "calabresa"
-            },
-            {
-                texto: "🧀 Fazer pizza de Mussarela",
-                destino: "mussarela"
-            }
-        ]
-    },
+let etapa = 1;
 
-    calabresa: {
-        texto: "Os clientes adoraram! Agora você precisa escolher uma bebida.",
-        opcoes: [
-            {
-                texto: "🥤 Refrigerante",
-                destino: "sucesso"
-            },
-            {
-                texto: "💧 Água",
-                destino: "normal"
-            }
-        ]
-    },
+const historia = document.getElementById("historia");
+const opcao1 = document.getElementById("opcao1");
+const opcao2 = document.getElementById("opcao2");
 
-    mussarela: {
-        texto: "Um cliente pediu borda recheada. O que você faz?",
-        opcoes: [
-            {
-                texto: "🧀 Colocar borda recheada",
-                destino: "sucesso"
-            },
-            {
-                texto: "❌ Não colocar",
-                destino: "fracasso"
-            }
-        ]
-    },
+function atualizarJogo(){
 
-    sucesso: {
-        texto: "🎉 Sua pizzaria virou a mais famosa da cidade! Parabéns!",
-        opcoes: [
-            {
-                texto: "🔄 Jogar novamente",
-                destino: "inicio"
-            }
-        ]
-    },
+    if(etapa === 1){
 
-    normal: {
-        texto: "🙂 O dia terminou com vendas razoáveis.",
-        opcoes: [
-            {
-                texto: "🔄 Tentar novamente",
-                destino: "inicio"
-            }
-        ]
-    },
+        historia.innerHTML = "🍕 Você abriu uma pizzaria. Qual pizza vai preparar?";
 
-    fracasso: {
-        texto: "😢 Os clientes ficaram insatisfeitos e foram embora.",
-        opcoes: [
-            {
-                texto: "🔄 Recomeçar",
-                destino: "inicio"
-            }
-        ]
+        opcao1.innerHTML = "Calabresa";
+        opcao2.innerHTML = "Frango com Catupiry";
+
     }
-};
 
-const texto = document.getElementById("texto");
-const opcoes = document.getElementById("opcoes");
+    else if(etapa === 2){
 
-function mostrarCena(cena){
+        historia.innerHTML = "😋 O cliente adorou a pizza! Agora escolha a bebida.";
 
-    texto.textContent = historia[cena].texto;
+        opcao1.innerHTML = "Refrigerante";
+        opcao2.innerHTML = "Suco";
 
-    opcoes.innerHTML = "";
+    }
 
-    historia[cena].opcoes.forEach(opcao => {
+    else if(etapa === 3){
 
-        const botao = document.createElement("button");
+        historia.innerHTML = "🎉 Parabéns! Sua pizzaria fez muito sucesso!";
 
-        botao.textContent = opcao.texto;
+        opcao1.innerHTML = "Jogar novamente";
+        opcao2.style.display = "none";
 
-        botao.onclick = function(){
-            mostrarCena(opcao.destino);
-        };
+    }
 
-        opcoes.appendChild(botao);
+    else if(etapa === 4){
 
-    });
+        historia.innerHTML = "😢 O cliente não gostou e foi embora.";
+
+        opcao1.innerHTML = "Tentar novamente";
+        opcao2.style.display = "none";
+
+    }
 
 }
 
-mostrarCena("inicio");
+opcao1.onclick = function(){
+
+    if(etapa === 1){
+
+        etapa = 2;
+
+    }
+
+    else if(etapa === 2){
+
+        etapa = 3;
+
+    }
+
+    else{
+
+        etapa = 1;
+        opcao2.style.display = "block";
+
+    }
+
+    atualizarJogo();
+
+}
+
+opcao2.onclick = function(){
+
+    if(etapa === 1){
+
+        etapa = 4;
+
+    }
+
+    else if(etapa === 2){
+
+        etapa = 4;
+
+    }
+
+    atualizarJogo();
+
+}
+
+atualizarJogo();
