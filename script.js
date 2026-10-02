@@ -1,5 +1,5 @@
 let etapa = 1;
-let afirmacoes = []; // Armazena as decisões da Alice
+let afirmacoes = []; // Guarda o histórico de escolhas da Dona Alice
 
 const historia = document.getElementById("historia");
 const opcao1 = document.getElementById("opcao1");
@@ -8,36 +8,36 @@ const opcao3 = document.getElementById("opcao3");
 
 function atualizarJogo() {
     if (etapa === 1) {
-        historia.innerHTML = "🍕 Alice abriu sua pizzaria. Qual sabor de pizza ela vai preparar para o primeiro cliente?";
-        opcao1.innerHTML = "Calabresa com Acebolado";
-        opcao2.innerHTML = "Frango com Catupiry";
-        opcao3.innerHTML = "Pizza de Abacaxi com Alho";
-        
+        historia.innerHTML = "🍕 Dona Alice acabou de abrir a sua famosa pizzaria! Um cliente faminto chega e faz o primeiro pedido. Qual sabor de pizza ela vai preparar?";
+        opcao1.innerHTML = "Pizza de Calabresa acebolada bem caprichada";
+        opcao2.innerHTML = "Pizza de Frango com Catupiry cremosa";
+        opcao3.innerHTML = "Pizza de Abacaxi com molho picante e alho";
+
         opcao1.style.display = "block";
         opcao2.style.display = "block";
         opcao3.style.display = "block";
     } 
     else if (etapa === 2) {
-        historia.innerHTML = "😋 O cliente adorou a pizza! Agora, qual bebida a Alice deve oferecer?";
-        opcao1.innerHTML = "Refrigerante gelado";
-        opcao2.innerHTML = "Suco natural de Laranja";
-        opcao3.innerHTML = "Água morna sem gás";
+        historia.innerHTML = "😋 O cliente adorou a pizza! Agora, qual bebida a Dona Alice deve servir para acompanhar?";
+        opcao1.innerHTML = "Guaraná trincando de gelado";
+        opcao2.innerHTML = "Suco natural de Laranja feito na hora";
+        opcao3.innerHTML = "Copo de café quente com açúcar";
 
         opcao1.style.display = "block";
         opcao2.style.display = "block";
         opcao3.style.display = "block";
     } 
     else if (etapa === 3) {
-        historia.innerHTML = "🍰 O refeição principal foi um sucesso! Qual sobremesa a Alice vai servir?";
-        opcao1.innerHTML = "Pizza Doce de Chocolate";
-        opcao2.innerHTML = "Pudim da Casa";
-        opcao3.innerHTML = "Sopa quentinha";
+        historia.innerHTML = "🍰 O refeição foi um sucesso! Para finalizar o atendimento com chave de ouro, qual sobremesa a Dona Alice oferece?";
+        opcao1.innerHTML = "Pizza Doce de Chocolate com Morango";
+        opcao2.innerHTML = "Fatia de Pudim caseiro da vovó";
+        opcao3.innerHTML = "Uma tijela de Sopa de Legumes";
 
         opcao1.style.display = "block";
         opcao2.style.display = "block";
         opcao3.style.display = "block";
     }
     else if (etapa === 4) {
-        // Vitória final e exibição das afirmações acumuladas
+        // Tela de vitória com o resumo de afirmações
         const resumoAfirmacoes = afirmacoes.join(" ");
-        historia.innerHTML = `🎉 **Parabéns! A pizzaria da Alice foi um sucesso absoluto!**
+        historia.innerHTML = `🎉 **Parabéns! O cliente saiu super satisfeito e a Pizzaria da Dona Alice é um sucesso!**
