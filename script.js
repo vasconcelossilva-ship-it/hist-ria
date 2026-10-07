@@ -20,31 +20,31 @@ const fases = {
     },
     4: {
         texto: "O cliente achou estranho comer pizza doce no almoço e decidiu ir embora.",
-        opcao1: { texto: "Tentar novamente", proximaFase: 1 },
+        opcao1: { texto: "Tentar novamente ↩️", proximaFase: 1 },
         opcao2: null,
         opcao3: null
     },
     5: {
         texto: "🏆 A pizza ficou perfeita! O cliente virou fã e a pizzaria da Alice foi um sucesso total!",
-        opcao1: { texto: "Jogar novamente", proximaFase: 1 },
+        opcao1: { texto: "Jogar novamente ↩️", proximaFase: 1 },
         opcao2: null,
         opcao3: null
     },
     6: {
         texto: "A borda de queijo queimou um pouco, mas o cliente achou saborosa e prometeu voltar.",
-        opcao1: { texto: "Jogar novamente", proximaFase: 1 },
+        opcao1: { texto: "Jogar novamente ↩️", proximaFase: 1 },
         opcao2: null,
         opcao3: null
     },
     7: {
         texto: "A gentileza de Alice salvou o dia! A pizza ficou ótima e o cliente elogiou o atendimento.",
-        opcao1: { texto: "Jogar novamente", proximaFase: 1 },
+        opcao1: { texto: "Jogar novamente ↩️", proximaFase: 1 },
         opcao2: null,
         opcao3: null
     },
     8: {
         texto: "A massa ficou crua por dentro! O cliente reclamou e foi embora insatisfeito.",
-        opcao1: { texto: "Tentar novamente", proximaFase: 1 },
+        opcao1: { texto: "Tentar novamente ↩️", proximaFase: 1 },
         opcao2: null,
         opcao3: null
     }
