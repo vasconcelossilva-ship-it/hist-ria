@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f7b267, #f79d65, #f4845f, #f25c54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#jogo {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #d90429;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+#caixa-texto {
+    background: #fff0f3;
+    border-left: 5px solid #ff4d6d;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#historia {
+    color: #2b2d42;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #e63946;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #b7094c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(183, 9, 76, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
